@@ -21,7 +21,7 @@
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-define( 'WP_ENVIRONMENT_TYPE', 'development' );
+define( 'WP_ENVIRONMENT_TYPE', 'staging' );
 switch(getenv("WP_ENVIRONMENT_TYPE")) {
 
 
