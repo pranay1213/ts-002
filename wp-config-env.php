@@ -21,25 +21,25 @@
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-// for local ENV
-
-	// define( 'DB_NAME', 'test-dev' );
-	// /** Database username */
-	// define( 'DB_USER', 'root' );
-	// /** Database password */
-	// define( 'DB_PASSWORD', '' );
-	// /** Database hostname */
-	// define( 'DB_HOST', 'localhost' );
-	// /** Database charset to use in creating database tables. */
-	// define( 'DB_CHARSET', 'utf8' );
-	// /** The database collate type. Don't change this if in doubt. */
-	// define( 'DB_COLLATE', '' );
-	
+define( 'WP_ENVIRONMENT_TYPE', 'staging' );
+switch(getenv("WP_ENVIRONMENT_TYPE")) {
 
 
-	
-// for staging
-
+case "development":
+	define( 'DB_NAME', 'test-dev' );
+	/** Database username */
+	define( 'DB_USER', 'root' );
+	/** Database password */
+	define( 'DB_PASSWORD', '' );
+	/** Database hostname */
+	define( 'DB_HOST', 'localhost' );
+	/** Database charset to use in creating database tables. */
+	define( 'DB_CHARSET', 'utf8' );
+	/** The database collate type. Don't change this if in doubt. */
+	define( 'DB_COLLATE', '' );
+	define( 'WP_DEBUG', true );
+	break;
+case "staging":
 	define( 'DB_NAME', 'dfscdnzhrd' );
 	/** Database username */
 	define( 'DB_USER', 'dfscdnzhrd' );
@@ -51,8 +51,23 @@
 	define( 'DB_CHARSET', 'utf8' );
 	/** The database collate type. Don't change this if in doubt. */
 	define( 'DB_COLLATE', '' );
-	// define( 'WP_DEBUG', true );
-	
+	define( 'WP_DEBUG', true );
+	break;
+default:
+define( 'DB_NAME', 'dfscdnzhrd' );
+/** Database username */
+define( 'DB_USER', 'dfscdnzhrd' );
+/** Database password */
+define( 'DB_PASSWORD', 'Gnt4YfRvYS' );
+/** Database hostname */
+define( 'DB_HOST', 'localhost' );
+/** Database charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8' );
+/** The database collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+define( 'WP_DEBUG', true );
+break;
+}
 
 /**#@+
  * Authentication unique keys and salts.
