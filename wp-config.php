@@ -52,7 +52,6 @@ case "staging":
 	/** The database collate type. Don't change this if in doubt. */
 	define( 'DB_COLLATE', '' );
 	define( 'WP_DEBUG', true );
-	var_dump();
 	break;
 default:
 define( 'DB_NAME', 'dfscdnzhrd' );
@@ -67,6 +66,7 @@ define( 'DB_CHARSET', 'utf8' );
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 define( 'WP_DEBUG', true );
+break;
 }
 
 /**#@+
